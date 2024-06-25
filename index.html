@@ -2,92 +2,294 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--* favicon -->
-    <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon" />
-    <!--! css link -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <!--todo tailwind cdn link -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: "#da373d",
-                    },
-                },
-            },
-        };
-    </script>
-
-    <title>Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- navbar -->
-    <div class=" overlay-colored color-bg-dark opacity-85	">
-        <header class="text-gray-600 body-font bg-none	">
-            <div class="container">
+<body class="font-inter">
+    <!-- <div class="w-full bg-gray-900  text-white" style="background-image: url('./assets/images/hero-bg.jpg');">
+        <header class=" container mx-auto flex items-center justify-between py-6 px-4">
+            <div class="flex items-center space-x-4">
+                <img src="./assets/images/logo/logo.png" alt="">
+            </div>
 
-                <img class="ml-3 text-xl  left-[3.7%] absolute top-[30px] " src="./assets/images/logo/logo.png" />
+        </header>
+
+        <div class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center lg:space-x-20">
+            <div class="text-center lg:text-left lg:w-1/2 space-y-6">
+                <p class="text-sm uppercase">We Craft Stuffs</p>
+                <h2 class="text-5xl font-bold">We Do Professional Things to Grow Your Business</h2>
+                <p>We care to deliver and craft adaptive services and solutions to our customers to achieve and satisfy
+                    their needs. We always take attention to every details within work.</p>
+                <button class="mt-6 py-3 px-6 bg-green-500 text-white rounded-full font-bold">Let's Start</button>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg mt-10 lg:mt-0 lg:w-1/2">
+                <h3 class="text-2xl font-bold mb-4">Get Started Today</h3>
+                <p class="mb-4">Everything you need to grow your business. Order our services today!</p>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg">
+                    <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg">
+                    <button type="submit" class="w-full py-3 bg-green-500 text-white rounded-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+    <div class="relative w-full h-screen bg-cover bg-center"
+        style="background-image: url('./assets/images/hero-bg.jpg');">
+        <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+        <div
+            class="relative z-10 container mx-auto px-4 pb-20 pt-10 flex flex-col lg:flex-row items-center lg:space-x-20">
+            <div class="text-center lg:text-left lg:w-3/5 space-y-6 text-white">
+                <div class="flex items-center space-x-4 mb-20">
+                    <img src="./assets/images/logo/logo.png" alt="">
+                </div>
+                <p class="text-sm uppercases">We Craft Stuffs</p>
+                <h2 class="text-5xl font-normal">We Do <em class="font-medium">Professional Things</em> to Grow Your
+                    Business</h2>
+                <p class="max-w-md">We care to deliver and craft adaptive services and solutions to our customers
+                    to achieve and satisfy
+                    their needs. We always take attention to every details within work.</p>
+                <div class="flex mt-5 justify-between items-center	">
+                    <button class=" py-3 px-6 bg-green-500 hover:bg-[#222] text-white rounded-full font-bold">Let's
+                        Start</button>
+                    <p>We Hope to Listen From You Soon</p>
+                </div>
 
             </div>
-        </header>
-        <!-- navbar  -->
-        <!-- hero section -->
-        <div class=" overlay-colored color-bg-dark opacity-85	">
-            <section class="text-gray-600 body-font" style="background-image: url('./assets/images/hero-bg.jpg');">
-
-                <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-                    <div class="lg:w-3/6 md:w-2/12 md:pr-16 lg:pr-0 pr-0">
-                        <h3 class="font-normal text-gray-900  mt-[70px]">WE CRAFT STUFFS</h3>
-                        <h1 class="title-font font-normal text-5xl pr-5 text-blue-900">We Do <em
-                                class="font-bold text-white">Professional
-                                Things</em> to
-                            Grow Your
-                            Business</h1>
-                        <p class="leading-relaxed mt-4 text-[20px] max-w-[419px]">We care to deliver and craft adaptive
-                            services
-                            and
-                            solutions to our
-                            customers to achieve and satisfy their needs. We always take attention to every details
-                            within
-                            work.
-                        </p>
-                        <button
-                            class="text-white font-medium mt-10 text-[24px] bg-green-500 border-0 py-2 px-8 rounded-full focus:outline-none hover:bg-[#222] ">Let's
-                            Start</button>
+            <div class="bg-white w-[460px] p-12 text-center rounded-lg shadow-lg mt-10 lg:mt-0 ">
+                <h3 class="text-2xl font-bold mb-4">Get Started Today</h3>
+                <p class="mb-4">Everything you need to grow your business. Order our services today!</p>
+                <form class="space-y-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Name" class="w-full  pl-9 p-3 border rounded-lg">
+                        <i class="fas fa-user absolute left-3 top-4 text-gray-500"></i>
                     </div>
-                    <div
-                        class="lg:w-2/5 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-                        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign Up</h2>
-                        <div class="relative mb-4">
-                            <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
-                            <input type="text" id="full-name" name="full-name"
-                                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <div class="relative">
+                        <input type="email" placeholder="Email" class="w-full  pl-9 p-3 border rounded-lg">
+                        <i class="fas fa-envelope absolute left-3 top-4 text-gray-500"></i>
+                    </div>
+                    <div class="relative">
+                        <input type="tel" placeholder="Phone Number" class="w-full pl-9 p-3 border rounded-lg">
+                        <i class="fas fa-phone absolute left-3 top-4 text-gray-500"></i>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-green-500 text-white rounded-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-20">
+        <h3 class="text-center text-3xl font-bold mb-10">We Always Take Attention to Every Details Within Work</h3>
+        <p class="text-center max-w-2xl mx-auto mb-20">We Care to Deliver and Craft Adaptive Services and Solutions to
+            Our Customers to Achieve and Satisfy Their Needs.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <i class="fas fa-cogs text-4xl text-green-500 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Technological Innovation</h4>
+                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-paint-brush text-4xl text-green-500 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Creativity Designs</h4>
+                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-headset text-4xl text-green-500 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Custom Support</h4>
+                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-project-diagram text-4xl text-green-500 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">Project Management</h4>
+                <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-3xl font-bold mb-4">Learn How to Grow Your Audience and Build an Online Business</h3>
+                <p class="max-w-xl mx-auto">This should be used to tell a story and let your users know a little more
+                    about your product or service. How can you benefit them?</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <img src="./assets/images/img-1.jpg" alt="Video"
+                    class="w-full md:w-1/2 rounded-lg shadow-lg mb-8 md:mb-0">
+                <div class="space-y-6 md:w-1/2">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check text-green-500 text-2xl"></i>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Ultimate Tools</h4>
+                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
                         </div>
-                        <div class="relative mb-4">
-                            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                            <input type="email" id="email" name="email"
-                                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check text-green-500 text-2xl"></i>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Best Analytics</h4>
+                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
                         </div>
-                        <button
-                            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                        <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.
-                        </p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check text-green-500 text-2xl"></i>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">SEO &amp; Analytics</h4>
+                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check text-green-500 text-2xl"></i>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Creative Solutions</h4>
+                            <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div class="text-center mt-10">
+                <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Get Quote</button>
+            </div>
         </div>
-
-        </section>
     </div>
-    <!-- hero section -->
 
-    <script src="./js/index.js"></script>
-</body>
+    <div class="container mx-auto px-4 py-20">
+        <div class="text-center mb-20">
+            <h3 class="text-3xl font-bold mb-4">Get Your Best Preferred and Suitable Pricing Plans and Options</h3>
+            <p class="max-w-xl mx-auto">This should be used to tell a story and let your users know a little more about
+                your product or service. How can you benefit them?</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                <h4 class="text-xl font-bold mb-4">Starter</h4>
+                <p class="text-4xl font-bold mb-4">$249 <span class="text-lg">Per Month</span></p>
+                <ul class="space-y-2 mb-4">
+                    <li>Marketing strategy</li>
+                    <li>Competitive analysis</li>
+                    <li>Social media audit</li>
+                    <li>Monthly management</li>
+                    <li>Unlimited data transfer</li>
+                </ul>
+                <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Get Started Now</button>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center border-4 border-green-500">
+                <h4 class="text-xl font-bold mb-4">Professional</h4>
+                <p class="text-4xl font-bold mb-4">$499 <span class="text-lg">Per Month</span></p>
+                <ul class="space-y-2 mb-4">
+                    <li>Marketing strategy</li>
+                    <li>Competitive analysis</li>
+                    <li>Social media audit</li>
+                    <li>Monthly management</li>
+                    <li>Unlimited data transfer</li>
+                </ul>
+                <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Get Started Now</button>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                <h4 class="text-xl font-bold mb-4">Enterprise</h4>
+                <p class="text-4xl font-bold mb-4">$799 <span class="text-lg">Per Month</span></p>
+                <ul class="space-y-2 mb-4">
+                    <li>Marketing strategy</li>
+                    <li>Competitive analysis</li>
+                    <li>Social media audit</li>
+                    <li>Monthly management</li>
+                    <li>Unlimited data transfer</li>
+                </ul>
+                <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Get Started Now</button>
+            </div>
+        </div>
+    </div>
 
-</html>
+    <div class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h3 class="text-3xl font-bold mb-4">What Are Our Customers Testimonials</h3>
+                <p class="max-w-xl mx-auto">This should be used to tell a story and let your users know a little more
+                    about your product or service. How can you benefit them?</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <img src="https://placehold.co/100x100" alt="Michael Smith"
+                        class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-bold mb-2">Michael Smith</h4>
+                    <p class="text-sm text-gray-600 mb-4">Backend Developer</p>
+                    <p class="mb-4">Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent
+                        per conubia.</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <img src="https://placehold.co/100x100" alt="Matt Nawski"
+                        class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-bold mb-2">Matt Nawski</h4>
+                    <p class="text-sm text-gray-600 mb-4">UI Designer</p>
+                    <p class="mb-4">Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent
+                        per conubia.</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <img src="https://placehold.co/100x100" alt="Tom Claysen"
+                        class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h4 class="text-xl font-bold mb-2">Tom Claysen</h4>
+                    <p class="text-sm text-gray-600 mb-4">UI Designer</p>
+                    <p class="mb-4">Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent
+                        per conubia.</p>
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-green-500 py-10">
+        <div class="container mx-auto px-4 flex justify-center items-center space-x-8">
+            <img src="https://placehold.co/150x50" alt="Wayward Originals" class="h-12">
+            <img src="https://placehold.co/150x50" alt="INFERA" class="h-12">
+            <img src="https://placehold.co/150x50" alt="Up" class="h-12">
+            <img src="https://placehold.co/150x50" alt="Stokes Peters" class="h-12">
+            <img src="https://placehold.co/150x50" alt="G&R" class="h-12">
+            <img src="https://placehold.co/150x50" alt="Wayward Originals" class="h-12">
+        </div>
+    </div>
+
+    <div class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">We Are Waiting</h3>
+            <h2 class="text-5xl font-bold mb-8">Let's Get Started Now!</h2>
+            <p class="max-w-xl mx-auto mb-8">We care to deliver adaptive services and solutions to our customers to
+                achieve and satisfy their needs.</p>
+            <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Let's Start</button>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container-lg mx-auto px-4 flex justify-between text-center">
+            <p class="mb-4">&copy; 2024 Clion. All Rights Reserved.</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:underline"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:underline"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:underline"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
