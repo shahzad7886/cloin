@@ -10,3 +10,16 @@
   background-color: rgba(5, 213, 97, 0.15);
   color: #222;
 }
+hr {
+  border-bottom: 1px solid #222;
+}
+.grid .card:hover {
+  transform: translateY(-10px);
+}
+.grid .card:hover h4 {
+  color: #2cfa89;
+}
+.grid .card:hover .icon {
+  background-color: #2cfa89;
+  color: #ffff;
+}
