@@ -23,8 +23,16 @@ hr {
   transform: translateY(-10px);
 }
 .grid .card:hover h4,
-.pricing-card:hover p {
+.pricing-card:hover .price {
   color: #2cfa89;
+}
+.pricing-card h4 {
+  font-size: 14px;
+  font-family: "Titillium Web", "Almarai", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
 }
 .grid .card:hover .icon {
   background-color: #2cfa89;
@@ -122,4 +130,17 @@ hr {
 }
 .btn-video i:hover {
   background: #222;
+}
+footer .space-x-4 a {
+  background: #aaa;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 20px;
+}
+footer .space-x-4 a:hover,
+i:hover {
+  /* transform: translateY(-50%); */
+  background-color: #2cfa89;
+  color: #fff;
 }
