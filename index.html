@@ -54,7 +54,7 @@
                 </div>
 
             </div>
-            <div class="bg-white w-[460px] mt-15 ml-[80px] p-12 text-center rounded-lg shadow-lg   ">
+            <div class="bg-white w-[460px] mt-15 ml-[80px] p-12 text-center rounded-lg shadow-lg">
                 <div class="icon">
                     <i class="fa fa-bullhorn" aria-hidden="true"></i>
                 </div>
@@ -356,7 +356,8 @@
                         litora
                         torquent
                         per conubia.</p>
-                    <img src="assets/images/men.jpg" alt="Michael Smith"
+                    <span class="icon-quote bg-[#05d561] w-[40px] h-[40x] rounded-full p-3 text-[48px]">“</span>
+                    <img src=" ./assets/images/men.jpg" alt="Michael Smith"
                         class="w-[60px] h-[60px] mx-auto rounded-full mb-4">
                     <h4 class="text-xl font-bold mb-2">Michael Smith</h4>
                     <p class="text-sm text-gray-600 mb-4">Backend Developer</p>
@@ -369,7 +370,7 @@
                     </div>
                 </div>
                 <div class=" p-8 rounded-lg  text-center">
-                    <p class="mb-4 bg-white p-8 rounded-md border-2  shadow-lg border-green-500">Quisque volutpat
+                    <p class="mb-4 p-8 bg-white rounded-md border-2  shadow-lg border-green-500">Quisque volutpat
                         condimentum velit.
                         Class
                         aptent taciti
@@ -415,24 +416,57 @@
     </div>
 
     <div class="bg-green-500 py-10">
-        <div class="container mx-auto px-4 flex justify-center items-center space-x-8">
-            <img src="https://placehold.co/150x50" alt="Wayward Originals" class="h-12">
-            <img src="https://placehold.co/150x50" alt="INFERA" class="h-12">
-            <img src="https://placehold.co/150x50" alt="Up" class="h-12">
-            <img src="https://placehold.co/150x50" alt="Stokes Peters" class="h-12">
-            <img src="https://placehold.co/150x50" alt="G&R" class="h-12">
-            <img src="https://placehold.co/150x50" alt="Wayward Originals" class="h-12">
+        <div class="container mx-auto px-4 py-8  items-center space-x-8">
+            <div class="slider relative overflow-hidden">
+                <div class="slider-inner flex">
+                    <div class="slide flex-none w-full">
+                        <img src="assets/images/slider/img-1.png" alt="Image 1" class="w-full">
+                        <img src="assets/images/slider/img-2.png" alt="Image 2" class="w-full">
+                        <img src="assets/images/slider/img-3.png" alt="Image 3" class="w-full">
+                        <img src="assets/images/slider/img-4.png" alt="Image 4" class="w-full">
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide flex-none w-full">
+                        <img src="assets/images/slider/img-5.png" alt="Image 5" class="w-full">
+                        <img src="assets/images/slider/img-6.png" alt="Image 6" class="w-full">
+                        <img src="assets/images/slider/img-2.png" alt="Image 7" class="w-full">
+                        <img src="assets/images/slider/img-1.png" alt="Image 8" class="w-full">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="bg-gray-900 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-3xl font-bold mb-4">We Are Waiting</h3>
-            <h2 class="text-5xl font-bold mb-8">Let's Get Started Now!</h2>
-            <p class="max-w-xl mx-auto mb-8">We care to deliver adaptive services and solutions to our customers to
-                achieve and satisfy their needs.</p>
-            <button class="py-3 px-6 bg-green-500 text-white rounded-full font-bold">Let's Start</button>
+    <div class="relative h-96 flex items-center bg-cover bg-center"
+        style="background-image: url('./assets/images/section3.jpg');">
+        <div class="absolute  inset-0 bg-[#222] opacity-85"></div>
+        <div class="grid grid-cols-1 w-full px-10 relative md:grid-cols-2 lg:grid-cols-2 gap-2">
+            <div class=" text-white p-[1.75rem]">
+                <h1 class="text-[50px] font-bold">
+                    <span class="font-[300]">We Are Waiting</span>
+                    <br>
+                    Let's Get Started Now!
+                </h1>
+                <p class="text-[20px] font-[300] opacity-65">
+                    We care to deliver adaptive services and solutions to our customers to achieve and satisfy their
+                    needs.
+                </p>
+            </div>
+            <div class="text-center text-white p-[1.75rem]">
+
+                <div class="flex items-center flex-col mt-10	">
+                    <button
+                        class="text-white font-medium mb-5 text-[24px] bg-green-500 border-0 py-[1.1rem] px-[3rem] rounded-full focus:outline-none hover:bg-[#222]">Let's
+                        Start</button>
+                    <button class="ml-5 text-start opacity-65 w-40">We Hope to Listen From You Soon</button>
+                </div>
+
+            </div>
+
+
         </div>
+
     </div>
 
     <footer class=" container-lg mx-auto py-14 px-10">
@@ -445,3 +479,36 @@
             </div>
         </div>
     </footer>
+    <script>
+        const slider = document.querySelector('.slider');
+        const sliderInner = document.querySelector('.slider-inner');
+        const slides = document.querySelectorAll('.slide');
+
+        let slideWidth = slider.clientWidth;
+        let currentSlide = 0;
+
+        function slideNext() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const offset = -currentSlide * slideWidth;
+            sliderInner.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Adjust slideWidth on window resize
+        window.addEventListener('resize', () => {
+            slideWidth = slider.clientWidth;
+            updateSlider();
+        });
+
+        // Slide automatically every 5 seconds
+        setInterval(slideNext, 5000);
+    </script>
+</body>
+
+</html>

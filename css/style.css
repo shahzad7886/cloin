@@ -140,7 +140,21 @@ footer .space-x-4 a {
 }
 footer .space-x-4 a:hover,
 i:hover {
-  /* transform: translateY(-50%); */
   background-color: #2cfa89;
   color: #fff;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slider-inner {
+  transition: transform 0.5s ease;
+}
+.slide {
+  display: flex;
+  justify-content: space-around;
+}
+.slide img {
+  width: 100px;
+  height: 70px;
 }
