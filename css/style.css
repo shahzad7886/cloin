@@ -158,3 +158,24 @@ i:hover {
   width: 100px;
   height: 70px;
 }
+@media only screen and (max-width: 600px) {
+  .slide img {
+    width: 60px;
+    height: 40px;
+  }
+  footer .space-x-4 a {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .flex-nne {
+    display: block !important;
+  }
+  .d-block {
+    flex-direction: column;
+  }
+  .d-block .space-x-4 {
+    display: flex;
+    justify-content: center;
+  }
+}
